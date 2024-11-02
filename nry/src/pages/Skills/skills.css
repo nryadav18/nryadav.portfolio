@@ -1,0 +1,161 @@
+.stitle {
+    margin-top: 30px;
+    font-size: 35px;
+    text-align: center;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.timeline-line {
+    position: absolute;
+    width: 4px;
+    background-color: var(--first);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+}
+
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.timeline-item.left {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item.right {
+    left: 50%;
+    text-align: left;
+}
+
+.timeline-item .timeline-content {
+    background-color: var(--second);
+    border: 2px solid var(--first);
+    color: #d8d8d8;
+    padding: 30px;
+    border-radius: 12px;
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    height: fit-content;
+}
+
+.timeline-item.left .timeline-content {
+    margin-left: auto;
+}
+
+.timeline-item.right .timeline-content {
+    margin-right: auto;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--first);
+    animation: blink 1.5s infinite;
+}
+
+.timeline-item.left::before {
+    right: -6px;
+    top: 50%;
+}
+
+.timeline-item.right::before {
+    left: -6px;
+    top: 50%;
+}
+
+.timeline-date {
+    font-size: 16px;
+    color: var(--first);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.timeline-content h3 {
+    font-size: 22px;
+    color: #e6e6ff;
+    margin: 0 0 10px;
+}
+
+.timeline-content p {
+    font-size: 16px;
+    color: #ccccff;
+    line-height: 1.6;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+}
+
+@media (max-width: 500px) {
+    .timeline-item {
+        width: 100%;
+    }
+
+    .timeline-line {
+        left: 5%;
+        transform: none;
+    }
+
+    .timeline-item.left,
+    .timeline-item.right {
+        left: 5px;
+        text-align: left;
+    }
+
+    .timeline-item .timeline-content {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+
+    .timeline-item::before {
+        content: "";
+        position: absolute;
+        top: 30px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: var(--first);
+        animation: blink 1.5s infinite;
+    }
+    
+    .timeline-item.left::before {
+        top: 50%;
+        right: 12px;
+    }
+    
+    .timeline-item.right::before {
+        top: 50%;
+        left: 12px;
+    }
+    .timeline-item::before {
+        top: 50%;
+        left: 12px;
+    }
+}

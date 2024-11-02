@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+/* Slick slider default styles */
+
+
+:root{
+  --first : #00CEFC;
+  --second : #101526;
+  --third : #08184d;
+  /* --first : red;
+  --second : black; */
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+  color: white;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+html{
+  overflow-x: hidden;
+}
+body{
+  background-color: var(--second);
+}
+span{
+  color: var(--first);
+}
+:focus{
+  outline: none;
+}
+

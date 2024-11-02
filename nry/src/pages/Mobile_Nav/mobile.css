@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
+.navigation {
+    position: fixed;
+    bottom: 0%;
+    z-index: 6;
+    width: 100svw;
+    height: 80px;
+    background: var(--third);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.navigation ul {
+    display: flex;
+    width: 350px;
+}
+
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5em;
+    text-align: center;
+    transition: 0.5s;
+    color: white;
+}
+
+.navigation ul li.active a .icon {
+    transform: translateY(-32px);
+}
+
+.navigation ul li a .text {
+    position: absolute;
+    color: white;
+    font-weight: 400;
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.navigation ul li.active a .text {
+    opacity: 1;
+    transform: translateY(10px);
+}
+
+.indicator {
+    position: absolute;
+    top: -33%;
+    width: 59px;
+    height: 59px;
+    background: var(--first);
+    border-radius: 50%;
+    transition: 0.5s;
+    box-shadow: 0px 0px 15px black;
+}
+
+.indicator::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border-top-right-radius: 20px;
+}
+
+.indicator::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border-top-left-radius: 20px;
+}
+
+.navigation ul li:nth-child(1).active~.indicator {
+    transform: translateX(calc(35px * 0));
+}
+
+.navigation ul li:nth-child(2).active~.indicator {
+    transform: translateX(calc(35px * 1));
+}
+
+.navigation ul li:nth-child(3).active~.indicator {
+    transform: translateX(calc(35px * 2));
+}
+
+.navigation ul li:nth-child(4).active~.indicator {
+    transform: translateX(calc(35px * 3));
+}
+
+.navigation ul li:nth-child(5).active~.indicator {
+    transform: translateX(calc(35px * 4));
+}
+
+.navigation ul li:nth-child(6).active~.indicator {
+    transform: translateX(calc(35px * 5));
+}
+
+@media only screen and (max-width: 375px) {
+    .navigation {
+        height: 70px;
+        border-radius: 0;
+    }
+
+    .navigation ul {
+        width: 100%;
+    }
+
+    .navigation ul li {
+        width: 60px;
+        height: 60px;
+    }
+
+    .navigation ul li a .icon {
+        font-size: 1.3em;
+    }
+
+    .navigation ul li a .text {
+        font-size: 0.7em;
+    }
+
+    .indicator {
+        width: 50px;
+        height: 50px;
+        top: -28%;
+    }
+
+    .navigation ul li:nth-child(1).active~.indicator {
+        transform: translateX(calc(30px * 0));
+    }
+
+    .navigation ul li:nth-child(2).active~.indicator {
+        transform: translateX(calc(30px * 1));
+    }
+
+    .navigation ul li:nth-child(3).active~.indicator {
+        transform: translateX(calc(30px * 2));
+    }
+
+    .navigation ul li:nth-child(4).active~.indicator {
+        transform: translateX(calc(30px * 3));
+    }
+
+    .navigation ul li:nth-child(5).active~.indicator {
+        transform: translateX(calc(30px * 4));
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    .navigation {
+        height: 75px;
+    }
+
+    .navigation ul {
+        width: 90%;
+    }
+
+    .navigation ul li {
+        width: 65px;
+        height: 65px;
+    }
+
+    .navigation ul li a .icon {
+        font-size: 1.4em;
+    }
+
+    .navigation ul li a .text {
+        font-size: 0.75em;
+    }
+
+    .indicator {
+        width: 50px;
+        height: 50px;
+        top: -30%;
+    }
+
+    .navigation ul li:nth-child(1).active~.indicator {
+        transform: translateX(calc(20px * 0));
+    }
+
+    .navigation ul li:nth-child(2).active~.indicator {
+        transform: translateX(calc(20px * 1));
+    }
+
+    .navigation ul li:nth-child(3).active~.indicator {
+        transform: translateX(calc(20px * 2));
+    }
+
+    .navigation ul li:nth-child(4).active~.indicator {
+        transform: translateX(calc(20px * 3));
+    }
+
+    .navigation ul li:nth-child(5).active~.indicator {
+        transform: translateX(calc(20px * 4));
+    }
+}

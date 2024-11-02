@@ -1,0 +1,132 @@
+.interships {
+    height: fit-content;
+    width: 100svw;
+
+}
+
+.ititle {
+    margin-top: 30px;
+    font-size: 35px;
+    text-align: center;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+
+.internships {
+    text-align: center;
+    padding: 2rem;
+}
+
+.ititle {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.internship-cards {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    transition: all 0.3s ease;
+}
+
+.internship-card {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.internship-card:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.background-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.card-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+    transition: all 0.3s ease;
+    gap: 30px !important;
+}
+
+.card-content:hover{
+    background: linear-gradient(to top, rgba(0, 206, 252, 0.8) 60%, transparent 100%);
+    transition: all 0.3s ease;
+    gap: 30px !important;
+}
+
+.hover-details {
+    display: none;
+    transition: all 0.3s ease;
+}
+
+.internship-card:hover .hover-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 85%;
+    transition: all 0.3s ease;
+}
+
+.internship-card:hover h3 {
+    display: none;
+    transition: all 0.3s ease;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.hover-details p {
+    margin: 0.5rem 0;
+    transition: all 0.3s ease;
+}
+
+.view-certificate-btn {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    color: var(--first);
+    background: #fff;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: 200px;
+}
+
+.view-certificate-btn:hover {
+    background-color: var(--first);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+@media only screen and (max-width: 500px){
+    .internship-card {
+        width: 330px;
+        height: 400px;
+    }
+}
