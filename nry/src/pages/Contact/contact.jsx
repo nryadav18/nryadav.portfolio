@@ -33,7 +33,7 @@ function Contact() {
         }
 
         if (formData.name && formData.email && (/\S+@\S+\.\S+/.test(formData.email)) && formData.message) {
-            toast('📨 Wait! We are Sending Your Message..', {autoClose: 2500,}); 
+            toast('📨 Wait! We are Sending Your Message..', {autoClose: 2500,})
             axios.post("https://nry-backend.vercel.app/contact-me",formData)
             .then(succ=>{
                 console.log("Thanks for Sending Your Valuable Message")
