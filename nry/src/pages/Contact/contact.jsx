@@ -15,7 +15,7 @@ function Contact() {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
     };
-
+    axios.defaults.withCredentials = true;
     const handleSubmit = (e) => {
         e.preventDefault();
 
