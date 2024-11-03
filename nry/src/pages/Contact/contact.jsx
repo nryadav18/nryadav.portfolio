@@ -33,13 +33,14 @@ function Contact() {
         }
 
         if (formData.name && formData.email && (/\S+@\S+\.\S+/.test(formData.email)) && formData.message) {
-            toast.success('Message sent successfully!');
-            axios.post("http://localhost:9000/contact-me",formData)
+            axios.post("https://nry-backend.vercel.app/contact-me",formData)
             .then(succ=>{
                 console.log(succ)
+                toast.success('Message sent successfully!');
             })
             .catch(err=>{
                 console.log(err)
+                toast.error('Network Error!');
             })
             setFormData({name:'',email:'',message:''})
         }
