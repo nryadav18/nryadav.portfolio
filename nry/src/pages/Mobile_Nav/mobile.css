@@ -177,42 +177,47 @@
 
 @media only screen and (max-width: 370px) {
     .navigation ul {
-        width: 82%;
+        width: 82% !important;
     }
 }
 
 @media only screen and (max-width: 360px) {
     .navigation ul {
-        width: 84%;
+        width: 84% !important;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .navigation ul {
+        width: 85% !important;
     }
 }
 
 @media only screen and (max-width: 350px) {
     .navigation ul {
-        width: 86%;
+        width: 86% !important;
     }
 }
 
 @media only screen and (max-width: 340px) {
     .navigation ul {
-        width: 88%;
+        width: 88% !important;
     }
 }
 
-
 @media only screen and (max-width: 335px) {
     .navigation ul {
-        width: 90%;
+        width: 90% !important;
     }
 }
 
 @media only screen and (max-width: 330px) {
     .navigation ul {
-        width: 92%;
+        width: 92% !important;
     }
 }
 @media only screen and (max-width: 320px) {
     .navigation ul {
-        width: 94%;
+        width: 94% !important;
     }
 }
