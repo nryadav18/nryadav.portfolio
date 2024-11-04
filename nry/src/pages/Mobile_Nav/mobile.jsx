@@ -14,6 +14,9 @@ const menuItems = [
 ];
 
 const Navigation = () => {
+
+    alert(window.innerWidth)
+    
     const [activeIndex, setActiveIndex] = useState(0);
 
     const handleActiveLink = (index) => {
