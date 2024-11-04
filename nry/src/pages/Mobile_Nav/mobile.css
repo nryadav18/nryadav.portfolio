@@ -183,13 +183,7 @@
 
 @media only screen and (max-width: 360px) {
     .navigation ul {
-        width: 84% !important;
-    }
-}
-
-@media only screen and (max-width: 360px) {
-    .navigation ul {
-        width: 85% !important;
+        width: 82% !important;
     }
 }
 
